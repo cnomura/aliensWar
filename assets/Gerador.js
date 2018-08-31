@@ -2,16 +2,16 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-      inimigoPrefab: cc.Prefab,
-      area: 10,
-      intervalo: 2,
+        inimigoPrefab: cc.Prefab,
+        area: 10,
+        intervalo: 2,
     },
 
-    onLoad () {
+    onLoad() {
         this.schedule(this.gerar, this.intervalo);
     },
 
-    gerar: function(){
+    gerar: function () {
         let inimigo = cc.instantiate(this.inimigoPrefab);
         inimigo.parent = this.node.parent;
 
@@ -23,11 +23,11 @@ cc.Class({
         inimigo.position = posicao;
     },
 
-    start () {
+    start() {
 
     },
 
-    update (dt) {
+    update(dt) {
 
     },
 });
